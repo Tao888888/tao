@@ -56,10 +56,6 @@ img.vimg:hover {
 
 
 .iframe-container {
-  /* 
-  padding-top 为高/宽的值
-  16:9 为 9/16=56.25%
-  */
   padding-top: 56.25%;
   position: relative;
 }

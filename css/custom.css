@@ -24,15 +24,6 @@
       display:none;
 }
 
-#veditor {
-	background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: right;
-	background-color: rgba(255, 255, 255, 0);
-	resize: vertical
-}
-
 #vcomments .vcards .vcard {
 	padding: 15px 20px 0 20px;
 	border-radius: 10px;
@@ -79,5 +70,4 @@ img.vimg:hover {
 .vpower{
       display:none;
 }
-
 

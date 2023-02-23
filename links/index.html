@@ -482,6 +482,58 @@
 </script>
 </center>
 
+<script src="/adview_pic_cpc_cpm_cpa_guanggao_gg_ads_300x250.js" type="text/javascript"></script>
+<style type="text/css">
+.addkillcont{position: fixed;z-index: 999999;bottom: 0px;background: #ffffff;width:100%;
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#00000000);}
+</style>
+<script type='text/javascript'>
+    $(document).ready(function(){
+        setTimeout(function(){new QXAdTest().init();},1);
+    });
+function QXAdTest(){
+    var thisObj = this;
+    //初始化，判断变量是否存在
+    this.init = function(){
+        try{
+            if(typeof(adskilltest)=='undefined' ){
+                this.DoShow();
+                $('.idcloseadtips').on("click",function(){
+                    $("#idadkillsho").remove();
+                });
+            }
+        }catch(e){
+            $("#idadkillsho").remove();
+        }
+    };
+    this.DoShow =function(){
+        try{
+            var TPL='<div id="idadkillsho" class="addkillcont">' +
+                    '<div style="color:red;font-weight:bold; text-align:center;">请不要屏蔽本站广告，广告是本站收入的唯一来源</div>'+
+                  '</div>';
+            var TPLObj = $(TPL);
+            TPLObj.appendTo($('BODY')).hide().fadeIn(500,function(){
+                    $("#addesc").animate({"margin-top":"150px"},600);
+                    $("#addesc").slideDown(500,function(){
+                        $("#addesc").animate({"height":"120px"},600);
+                    }
+                );
+                //3秒移除
+                thisObj.DelayRemove();
+            });
+        }catch(e){
+            $("#idadkillsho").remove();//一定移除
+        }
+    }
+    this.DelayRemove = function(){
+        setTimeout(function(){
+            $("#addesc").fadeOut(600,function(){
+                $("#idadkillsho").remove();
+            });
+        },10000);
+    }
+}
+</script>
   </footer>
 
   <!-- Scripts -->

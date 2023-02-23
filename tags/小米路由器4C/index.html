@@ -27,8 +27,17 @@
     window.attachEvent("onload", downloadJSAtOnload);
     else window.onload = downloadJSAtOnload;
   </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8272762342473783"
-     crossorigin="anonymous"></script>
+  <script>
+    window.onload = function() {
+    setTimeout(function() {
+	let script = document.createElement("script");
+	script.setAttribute("data-ad-client", "ca-pub-8272762342473783");
+	script.setAttribute("async", "");
+	script.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?";
+	document.body.appendChild(script);
+      }, 2000);
+    };
+  </script>
   
     <meta name="description" content="一个爱好科技的网站，主要范围为手机、电脑、路由器、单片机">
 <meta property="og:type" content="website">

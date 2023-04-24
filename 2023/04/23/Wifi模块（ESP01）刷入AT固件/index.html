@@ -26,26 +26,26 @@
     }
   </script>
   
-    <meta name="description" content="小米路由器mini 刷入OpenWRT的详细教程，提供配套的刷机工具下载地址">
+    <meta name="description" content="ESP8266 WIFI模块刷入AT固件,AT命令介绍及固件下载">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小米mini路由器刷机教程">
-<meta property="og:url" content="https://www.tao-space.top/2023/01/01/%E5%B0%8F%E7%B1%B3mini%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="Wifi模块（ESP01）刷入AT固件">
+<meta property="og:url" content="https://www.tao-space.top/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/index.html">
 <meta property="og:site_name" content="每日书库">
-<meta property="og:description" content="小米路由器mini 刷入OpenWRT的详细教程，提供配套的刷机工具下载地址">
+<meta property="og:description" content="ESP8266 WIFI模块刷入AT固件,AT命令介绍及固件下载">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.tao-space.top/postimg/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8mini.jpg">
-<meta property="article:published_time" content="2022-12-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-24T01:31:39.147Z">
+<meta property="og:image" content="https://www.tao-space.top/esp826601.jpg">
+<meta property="article:published_time" content="2023-04-23T10:16:25.000Z">
+<meta property="article:modified_time" content="2023-04-24T09:22:26.546Z">
 <meta property="article:author" content="Tao">
-<meta property="article:tag" content="路由器刷机">
-<meta property="article:tag" content="小米路由器">
-<meta property="article:tag" content="小米路由器mini">
+<meta property="article:tag" content="WIFI模块">
+<meta property="article:tag" content="ESP8266">
+<meta property="article:tag" content="AT固件">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.tao-space.top/postimg/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8mini.jpg">
+<meta name="twitter:image" content="https://www.tao-space.top/esp826601.jpg">
   
   
   
-  <title>小米mini路由器刷机教程 - 每日书库</title>
+  <title>Wifi模块（ESP01）刷入AT固件 - 每日书库</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -254,13 +254,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/postimg/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8mini.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="小米mini路由器刷机教程"></span>
+            <span id="subtitle" data-typed-text="Wifi模块（ESP01）刷入AT固件"></span>
           
         </div>
 
@@ -271,8 +271,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-01 00:00" pubdate>
-          2023年1月1日 凌晨
+        <time datetime="2023-04-23 18:16" pubdate>
+          2023年4月23日 晚上
         </time>
       </span>
     
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          919 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          12 分钟
+          8 分钟
         
       </span>
     
@@ -345,77 +345,202 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">小米mini路由器刷机教程</h1>
+            <h1 style="display: none">Wifi模块（ESP01）刷入AT固件</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="一、产品介绍"><a href="#一、产品介绍" class="headerlink" title="一、产品介绍"></a>一、产品介绍</h1><p>小米路由器mini是小米公司于2014年4月23日发布的路由器。搭载 MT7620A 处理器，配备USB 2.0接口。采用 2.4GHz&#x2F;5GHz 真双频AC 2X2 天线，即在2.4GHz和5GHz频段均采用2X2天线，在5吉赫兹频段仍然保证双通道上网速率，传输速率为1167兆比特每秒，支持超强穿墙模式。</p>
-<div align="center">
-<img src="/2023/01/01/%E5%B0%8F%E7%B1%B3mini%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8mini.jpg" srcset="/img/loading.gif" lazyload class="" title="小米路由器mini">
-<p>小米路由器mini</p>
-</div>
+                <h1 id="一、模块介绍"><a href="#一、模块介绍" class="headerlink" title="一、模块介绍"></a>一、模块介绍</h1><p>ESP8266 是一款由上海乐鑫信息科技开发的可以作为微控制器使用的成本极低且具有完整TCP&#x2F;IP协议栈的Wi-Fi IoT控制芯片。 由Ai-Thinker生产的ESP-01芯片于2014年8月首次引起了西方的创客们的注意, 这个小模块允许微控制器通过海斯命令集使用TCP &#x2F; IP协议栈连接到Wi-Fi网络。</p>
+<center><img src="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/esp826601.jpg" srcset="/img/loading.gif" lazyload class="" title="ESP8266-01"></center>
 
-<h1 id="二、刷机准备"><a href="#二、刷机准备" class="headerlink" title="二、刷机准备"></a>二、刷机准备</h1><h2 id="1-硬件准备"><a href="#1-硬件准备" class="headerlink" title="1.硬件准备"></a>1.硬件准备</h2><ul>
-<li>小米路由器mini</li>
-<li>电脑</li>
-<li>网线</li>
-<li>U盘</li>
-<li>牙签</li>
+<h1 id="二、前期准备"><a href="#二、前期准备" class="headerlink" title="二、前期准备"></a>二、前期准备</h1><ul>
+<li>Wifi模块（ESP8266-01&#x2F;01S；ATK-ESP-01）</li>
+<li>USB转TTL （最好含有有2个VCC和2个GND）</li>
+<li>杜邦线（6+）</li>
 </ul>
-<h2 id="2-软件准备"><a href="#2-软件准备" class="headerlink" title="2.软件准备"></a>2.软件准备</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.putty.org/">Putty</a></li>
-<li><a target="_blank" rel="noopener" href="https://winscp.net/eng/download.php">WinSCP</a></li>
-</ul>
-<h1 id="三、视频教程"><a href="#三、视频教程" class="headerlink" title="三、视频教程"></a>三、视频教程</h1><div class="iframe-container">
-<iframe src="//player.bilibili.com/player.html?bvid=BV1VA411u7oS&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100%> </iframe>
-</div>
-<style type="text/css">
-.iframe-container {
-  padding-top: 56.25%;
-  position: relative;
-}
-.iframe-container iframe {
-   position: absolute;
-   height: 100%;
-   width: 100%;
-   top: 0;
-   left: 0;
-}
-#veditor {
-    background-image: url(/postimg/小米路由器mini.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-color: rgba(255, 255, 255, 0);
-    resize: vertical
-}
-</style>
+<h1 id="三、连接方法"><a href="#三、连接方法" class="headerlink" title="三、连接方法"></a>三、连接方法</h1><table>
+<thead>
+<tr>
+<th>ESP8266-01</th>
+<th>ESP8266-01S</th>
+<th>ATK-ESP-01</th>
+<th>USB TO TTL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VCC</td>
+<td>VCC</td>
+<td>VCC</td>
+<td>3.3V</td>
+</tr>
+<tr>
+<td>TX</td>
+<td>TX</td>
+<td>TX</td>
+<td>RX</td>
+</tr>
+<tr>
+<td>RX</td>
+<td>RX</td>
+<td>RX</td>
+<td>TX</td>
+</tr>
+<tr>
+<td>CH_PD</td>
+<td>CH_PD &#x2F; EN</td>
+<td>-</td>
+<td>3.3V</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>GND</td>
+<td>GND</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>GPIO0</td>
+<td>IO0</td>
+<td>IO_0</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>GPIO2</td>
+<td>IO2</td>
+<td>-</td>
+<td>悬空</td>
+</tr>
+<tr>
+<td>RST</td>
+<td>RST</td>
+<td>RST</td>
+<td>悬空</td>
+</tr>
+</tbody></table>
+<center><img src="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/esp826601pin.png" srcset="/img/loading.gif" lazyload class="" title="ESP8266-01&#x2F;01S引脚图"></center>
 
-<h1 id="四、固件下载"><a href="#四、固件下载" class="headerlink" title="四、固件下载"></a>四、固件下载</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://url70.ctfile.com/f/17643570-536282766-7395ad?p=9105">小米路由器mini - PPT</a>（访问密码：9105）</li>
-<li><a target="_blank" rel="noopener" href="https://url70.ctfile.com/f/17643570-536282831-df195f?p=9105">小米路由器mini刷机固件</a>（访问密码：9105）</li>
-</ul>
-<h1 id="五、刷机教程"><a href="#五、刷机教程" class="headerlink" title="五、刷机教程"></a>五、刷机教程</h1><h2 id="1-路由器升级"><a href="#1-路由器升级" class="headerlink" title="1.路由器升级"></a>1.路由器升级</h2><p>路由器的固件版本升级为<a target="_blank" rel="noopener" href="http://www1.miwifi.com/miwifi_download.html">开发板ROM</a></p>
-<h2 id="2-工具包获取"><a href="#2-工具包获取" class="headerlink" title="2.工具包获取"></a>2.工具包获取</h2><ol>
-<li>打开小米官方的<a target="_blank" rel="noopener" href="https://d.miwifi.com/rom/ssh">SSH工具</a>获取密码</li>
-<li>下载文件</li>
-<li>将文件拷贝至U盘并插到路由器</li>
-<li>路由器断电</li>
-<li>按住reset（3-5s）键上电，指示灯有变化使松开</li>
-</ol>
-<h2 id="3-SSH备份"><a href="#3-SSH备份" class="headerlink" title="3.SSH备份"></a>3.SSH备份</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c">cat /proc/mtd df -h<br>dd <span class="hljs-keyword">if</span>=/dev/mtd0 of=/extdisks/sda1/<span class="hljs-number">0</span>-all.bin<br>dd <span class="hljs-keyword">if</span>=/dev/mtd1 of=/extdisks/sda1/<span class="hljs-number">1</span>-bootloader.bin<br>dd <span class="hljs-keyword">if</span>=/dev/mtd2 of=/extdisks/sda1/<span class="hljs-number">2</span>-config.bin<br>dd <span class="hljs-keyword">if</span>=/dev/mtd3 of=/extdisks/sda1/<span class="hljs-number">3</span>-Factory.bin<br>dd <span class="hljs-keyword">if</span>=/dev/mtd4 of=/extdisks/sda1/<span class="hljs-number">4</span>-OS1.bin<br>dd <span class="hljs-keyword">if</span>=/dev/mtd5 of=/extdisks/sda1/<span class="hljs-number">5</span>-rootfs.bin<br>dd <span class="hljs-keyword">if</span>=/dev/mtd6 of=/extdisks/sda1/<span class="hljs-number">6</span>-OS2.bin<br>dd <span class="hljs-keyword">if</span>=/dev/mtd7 of=/extdisks/sda1/<span class="hljs-number">7</span>-overlay.bin<br>dd <span class="hljs-keyword">if</span>=/dev/mtd8 of=/extdisks/sda1/<span class="hljs-number">8</span>-crash.bin<br>dd <span class="hljs-keyword">if</span>=/dev/mtd9 of=/extdisks/sda1/<span class="hljs-number">9</span>-reserved.bin<br>dd <span class="hljs-keyword">if</span>=/dev/mtd10 of=/extdisks/sda1/<span class="hljs-number">10</span>-Bdata.bin<br></code></pre></td></tr></table></figure>
-<h2 id="4-刷入Breed"><a href="#4-刷入Breed" class="headerlink" title="4.刷入Breed"></a>4.刷入Breed</h2><ol>
-<li>从 <a target="_blank" rel="noopener" href="https://breed.hackpascal.net/">Breed</a>  的网站找到所对应的型号</li>
-<li>登录 WinSCP 将文件传输到 tmp  目录下</li>
-<li>回到 PuTTY 中检查文件是否存在</li>
-<li>运行命令<code>mtd -r write /tmp/breed.bin Bootloader</code></li>
-</ol>
-<h2 id="5-刷入OpenWRT固件"><a href="#5-刷入OpenWRT固件" class="headerlink" title="5.刷入OpenWRT固件"></a>5.刷入OpenWRT固件</h2><ol>
-<li>将网线连接到电脑</li>
-<li>在网址栏输入网址 <a target="_blank" rel="noopener" href="http://192.168.1.1/">192.168.1.1</a></li>
-<li>上传固件<br> 注意：刷错&#x2F;更换固件可直接进入breed模式重刷</li>
-</ol>
+<h1 id="四、刷入教程"><a href="#四、刷入教程" class="headerlink" title="四、刷入教程"></a>四、刷入教程</h1><h2 id="1-Flash-刷写工具"><a href="#1-Flash-刷写工具" class="headerlink" title="1. Flash 刷写工具"></a>1. Flash 刷写工具</h2><center><img src="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/step01.png" srcset="/img/loading.gif" lazyload class="" title="步骤1"></center>
+
+<h2 id="2-选择第一个按钮"><a href="#2-选择第一个按钮" class="headerlink" title="2. 选择第一个按钮"></a>2. 选择第一个按钮</h2><center><img src="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/step02.png" srcset="/img/loading.gif" lazyload class="" title="步骤2"></center>
+
+<h2 id="3-根据固件类型烧录"><a href="#3-根据固件类型烧录" class="headerlink" title="3.根据固件类型烧录"></a>3.根据固件类型烧录</h2><center><img src="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/step03.png" srcset="/img/loading.gif" lazyload class="" title="步骤3"></center>
+
+<h1 id="五、软件下载"><a href="#五、软件下载" class="headerlink" title="五、软件下载"></a>五、软件下载</h1><p><a target="_blank" rel="noopener" href="https://url70.ctfile.com/d/17643570-55677914-f78716?p=9105">FLASH_DOWNLOAD_TOOLS</a></p>
+<h1 id="六、固件下载"><a href="#六、固件下载" class="headerlink" title="六、固件下载"></a>六、固件下载</h1><table>
+<thead>
+<tr>
+<th>固件名称</th>
+<th>@</th>
+<th>CrystalFreq</th>
+<th>SPEED</th>
+<th>MODE</th>
+<th>SIZE</th>
+<th>BAUD</th>
+<th>下载地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ai-Thinker-8M</td>
+<td>0x00000</td>
+<td>26M</td>
+<td>40MHZ</td>
+<td>DOUT</td>
+<td>8Mbits</td>
+<td>115200</td>
+<td><a target="_blank" rel="noopener" href="https://url70.ctfile.com/f/17643570-842765231-9e2362?p=9105">下载</a></td>
+</tr>
+<tr>
+<td>Ai-Thinker-32M</td>
+<td>0x00000</td>
+<td>26M</td>
+<td>40MHZ</td>
+<td>DOUT</td>
+<td>32Mbits</td>
+<td>115200</td>
+<td><a target="_blank" rel="noopener" href="https://url70.ctfile.com/f/17643570-842766513-1e6adf?p=9105">下载</a></td>
+</tr>
+</tbody></table>
+<h1 id="七、命令简介"><a href="#七、命令简介" class="headerlink" title="七、命令简介"></a>七、命令简介</h1><p><a target="_blank" rel="noopener" href="https://url70.ctfile.com/d/17643570-55679243-37a195?p=9105">AT指令集文档</a></p>
+<table>
+<thead>
+<tr>
+<th>AT命令</th>
+<th>介绍说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AT</td>
+<td>测试AT启动</td>
+</tr>
+<tr>
+<td>AT + RST</td>
+<td>重启模块</td>
+</tr>
+<tr>
+<td>AT + GMR</td>
+<td>检查固件版本</td>
+</tr>
+<tr>
+<td>AT+CWMODE</td>
+<td>选择WIFI应用模式</td>
+</tr>
+<tr>
+<td>AT+CWJAP</td>
+<td>加入AP</td>
+</tr>
+<tr>
+<td>AT+CWLAP</td>
+<td>列出当前可用AP</td>
+</tr>
+<tr>
+<td>AT+CWQAP</td>
+<td>退出与AP的连接</td>
+</tr>
+<tr>
+<td>AT+ CWSAP</td>
+<td>设置AP模式下的参数</td>
+</tr>
+<tr>
+<td>AT+ CWLIF</td>
+<td>查看已接入设备的IP</td>
+</tr>
+<tr>
+<td>AT+ CIPSTATUS</td>
+<td>获得连接状态</td>
+</tr>
+<tr>
+<td>AT+CIPSTART</td>
+<td>建立TCP连接或注册UDP端口号</td>
+</tr>
+<tr>
+<td>AT+CIPSEND</td>
+<td>发送数据</td>
+</tr>
+<tr>
+<td>AT+CIPCLOSE</td>
+<td>关闭TCP或UDP</td>
+</tr>
+<tr>
+<td>AT+CIFSR</td>
+<td>获取本地IP地址</td>
+</tr>
+<tr>
+<td>AT+CIPMUX</td>
+<td>启动多连接</td>
+</tr>
+<tr>
+<td>AT+CIPSERVER</td>
+<td>配置为服务器</td>
+</tr>
+<tr>
+<td>AT+CIPMODE</td>
+<td>设置模块传输模式</td>
+</tr>
+<tr>
+<td>AT+CIPSTO</td>
+<td>设置服务器超时时间</td>
+</tr>
+</tbody></table>
+<h1 id="访问密码"><a href="#访问密码" class="headerlink" title="访问密码"></a>访问密码</h1><p>本站的通用访问密码是：<strong>9105</strong></p>
 
                 
               </div>
@@ -434,7 +559,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%A7%86%E9%A2%91%E8%81%94%E5%8A%A8/" class="category-chain-item">视频联动</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E6%A8%A1%E5%9D%97/" class="category-chain-item">硬件模块</a>
   
   
 
@@ -449,11 +574,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E6%9C%BA/">#路由器刷机</a>
+        <a href="/tags/WIFI%E6%A8%A1%E5%9D%97/">#WIFI模块</a>
       
-        <a href="/tags/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8/">#小米路由器</a>
+        <a href="/tags/ESP8266/">#ESP8266</a>
       
-        <a href="/tags/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8mini/">#小米路由器mini</a>
+        <a href="/tags/AT%E5%9B%BA%E4%BB%B6/">#AT固件</a>
       
     </div>
   
@@ -465,8 +590,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>小米mini路由器刷机教程</div>
-      <div>https://www.tao-space.top/2023/01/01/小米mini路由器刷机教程/</div>
+      <div>Wifi模块（ESP01）刷入AT固件</div>
+      <div>https://www.tao-space.top/2023/04/23/Wifi模块（ESP01）刷入AT固件/</div>
     </div>
     <div class="license-meta">
       
@@ -478,7 +603,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年1月1日</div>
+          <div>2023年4月23日</div>
         </div>
       
       
@@ -510,18 +635,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/" title="Wifi模块（ESP01）刷入AT固件">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Wifi模块（ESP01）刷入AT固件</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/01/01/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%EF%BC%883C%203G%203A%204%204A%204C%EF%BC%89%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/" title="小米路由器（3C 3G 3A 4 4A 4C）刷机教程">
-                        <span class="hidden-mobile">小米路由器（3C 3G 3A 4 4A 4C）刷机教程</span>
+                      <a href="/2023/01/01/%E5%B0%8F%E7%B1%B3mini%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/" title="小米mini路由器刷机教程">
+                        <span class="hidden-mobile">小米mini路由器刷机教程</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

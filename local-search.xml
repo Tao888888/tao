@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>Wifi模块（ESP01）刷入AT固件</title>
+    <link href="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/"/>
+    <url>/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、模块介绍"><a href="#一、模块介绍" class="headerlink" title="一、模块介绍"></a>一、模块介绍</h1><p>ESP8266 是一款由上海乐鑫信息科技开发的可以作为微控制器使用的成本极低且具有完整TCP&#x2F;IP协议栈的Wi-Fi IoT控制芯片。 由Ai-Thinker生产的ESP-01芯片于2014年8月首次引起了西方的创客们的注意, 这个小模块允许微控制器通过海斯命令集使用TCP &#x2F; IP协议栈连接到Wi-Fi网络。</p><center><img src="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/esp826601.jpg" srcset="/img/loading.gif" lazyload class="" title="ESP8266-01"></center><h1 id="二、前期准备"><a href="#二、前期准备" class="headerlink" title="二、前期准备"></a>二、前期准备</h1><ul><li>Wifi模块（ESP8266-01&#x2F;01S；ATK-ESP-01）</li><li>USB转TTL （最好含有有2个VCC和2个GND）</li><li>杜邦线（6+）</li></ul><h1 id="三、连接方法"><a href="#三、连接方法" class="headerlink" title="三、连接方法"></a>三、连接方法</h1><table><thead><tr><th>ESP8266-01</th><th>ESP8266-01S</th><th>ATK-ESP-01</th><th>USB TO TTL</th></tr></thead><tbody><tr><td>VCC</td><td>VCC</td><td>VCC</td><td>3.3V</td></tr><tr><td>TX</td><td>TX</td><td>TX</td><td>RX</td></tr><tr><td>RX</td><td>RX</td><td>RX</td><td>TX</td></tr><tr><td>CH_PD</td><td>CH_PD &#x2F; EN</td><td>-</td><td>3.3V</td></tr><tr><td>GND</td><td>GND</td><td>GND</td><td>GND</td></tr><tr><td>GPIO0</td><td>IO0</td><td>IO_0</td><td>GND</td></tr><tr><td>GPIO2</td><td>IO2</td><td>-</td><td>悬空</td></tr><tr><td>RST</td><td>RST</td><td>RST</td><td>悬空</td></tr></tbody></table><center><img src="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/esp826601pin.png" srcset="/img/loading.gif" lazyload class="" title="ESP8266-01&#x2F;01S引脚图"></center><h1 id="四、刷入教程"><a href="#四、刷入教程" class="headerlink" title="四、刷入教程"></a>四、刷入教程</h1><h2 id="1-Flash-刷写工具"><a href="#1-Flash-刷写工具" class="headerlink" title="1. Flash 刷写工具"></a>1. Flash 刷写工具</h2><center><img src="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/step01.png" srcset="/img/loading.gif" lazyload class="" title="步骤1"></center><h2 id="2-选择第一个按钮"><a href="#2-选择第一个按钮" class="headerlink" title="2. 选择第一个按钮"></a>2. 选择第一个按钮</h2><center><img src="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/step02.png" srcset="/img/loading.gif" lazyload class="" title="步骤2"></center><h2 id="3-根据固件类型烧录"><a href="#3-根据固件类型烧录" class="headerlink" title="3.根据固件类型烧录"></a>3.根据固件类型烧录</h2><center><img src="/2023/04/23/Wifi%E6%A8%A1%E5%9D%97%EF%BC%88ESP01%EF%BC%89%E5%88%B7%E5%85%A5AT%E5%9B%BA%E4%BB%B6/step03.png" srcset="/img/loading.gif" lazyload class="" title="步骤3"></center><h1 id="五、软件下载"><a href="#五、软件下载" class="headerlink" title="五、软件下载"></a>五、软件下载</h1><p><a href="https://url70.ctfile.com/d/17643570-55677914-f78716?p=9105">FLASH_DOWNLOAD_TOOLS</a></p><h1 id="六、固件下载"><a href="#六、固件下载" class="headerlink" title="六、固件下载"></a>六、固件下载</h1><table><thead><tr><th>固件名称</th><th>@</th><th>CrystalFreq</th><th>SPEED</th><th>MODE</th><th>SIZE</th><th>BAUD</th><th>下载地址</th></tr></thead><tbody><tr><td>Ai-Thinker-8M</td><td>0x00000</td><td>26M</td><td>40MHZ</td><td>DOUT</td><td>8Mbits</td><td>115200</td><td><a href="https://url70.ctfile.com/f/17643570-842765231-9e2362?p=9105">下载</a></td></tr><tr><td>Ai-Thinker-32M</td><td>0x00000</td><td>26M</td><td>40MHZ</td><td>DOUT</td><td>32Mbits</td><td>115200</td><td><a href="https://url70.ctfile.com/f/17643570-842766513-1e6adf?p=9105">下载</a></td></tr></tbody></table><h1 id="七、命令简介"><a href="#七、命令简介" class="headerlink" title="七、命令简介"></a>七、命令简介</h1><p><a href="https://url70.ctfile.com/d/17643570-55679243-37a195?p=9105">AT指令集文档</a></p><table><thead><tr><th>AT命令</th><th>介绍说明</th></tr></thead><tbody><tr><td>AT</td><td>测试AT启动</td></tr><tr><td>AT + RST</td><td>重启模块</td></tr><tr><td>AT + GMR</td><td>检查固件版本</td></tr><tr><td>AT+CWMODE</td><td>选择WIFI应用模式</td></tr><tr><td>AT+CWJAP</td><td>加入AP</td></tr><tr><td>AT+CWLAP</td><td>列出当前可用AP</td></tr><tr><td>AT+CWQAP</td><td>退出与AP的连接</td></tr><tr><td>AT+ CWSAP</td><td>设置AP模式下的参数</td></tr><tr><td>AT+ CWLIF</td><td>查看已接入设备的IP</td></tr><tr><td>AT+ CIPSTATUS</td><td>获得连接状态</td></tr><tr><td>AT+CIPSTART</td><td>建立TCP连接或注册UDP端口号</td></tr><tr><td>AT+CIPSEND</td><td>发送数据</td></tr><tr><td>AT+CIPCLOSE</td><td>关闭TCP或UDP</td></tr><tr><td>AT+CIFSR</td><td>获取本地IP地址</td></tr><tr><td>AT+CIPMUX</td><td>启动多连接</td></tr><tr><td>AT+CIPSERVER</td><td>配置为服务器</td></tr><tr><td>AT+CIPMODE</td><td>设置模块传输模式</td></tr><tr><td>AT+CIPSTO</td><td>设置服务器超时时间</td></tr></tbody></table><h1 id="访问密码"><a href="#访问密码" class="headerlink" title="访问密码"></a>访问密码</h1><p>本站的通用访问密码是：<strong>9105</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>硬件模块</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>WIFI模块</tag>
+      
+      <tag>ESP8266</tag>
+      
+      <tag>AT固件</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>小米mini路由器刷机教程</title>
     <link href="/2023/01/01/%E5%B0%8F%E7%B1%B3mini%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
     <url>/2023/01/01/%E5%B0%8F%E7%B1%B3mini%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B/</url>
